@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { @apply scroll-smooth; }
+
+  body {
+    @apply bg-zinc-950 text-zinc-100 antialiased min-h-screen;
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif;
+  }
+
+  #root {
+    @apply min-h-screen flex flex-col;
+  }
+
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { @apply bg-zinc-700 rounded-full; }
+  ::-webkit-scrollbar-thumb:hover { @apply bg-zinc-600; }
+
+  * { box-sizing: border-box; }
+}
+
+/* Hide scrollbar for horizontal rows */
+.overflow-x-auto::-webkit-scrollbar {
+  display: none;
+}
